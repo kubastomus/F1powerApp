@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Drivers Standing</title>
+</head>
+<body>
+
+<table>
+    <th>
+        <tr>Position</tr>
+        <tr>Driver Name</tr>
+        <tr>Driver Surname</tr>
+        <tr>Constructor</tr>
+        <tr>Laps</tr>
+        <tr>Time</tr>
+        <tr>Status</tr>
+        <tr>Points</tr>
+
+    </th>
+    <tr
+            th:each="raceResult, iSeason: ${raceResult}"
+            th:style="${iSeason.odd}? 'font-weight: bold;'"
+            th:alt-title="${iSeason.even}? 'even' : 'odd'">
+        <td th:text="${raceResult.positionText}" />
+        <td th:text="${raceResult.driver.givenName}" />
+        <td th:text="${raceResult.driver.familyName}" />
+        <td th:text="${raceResult.constructor.name}" />
+        <td th:text="${raceResult.laps}" />
+        <td th:text="${raceResult?.time?.time}" />
+        <td th:text="${raceResult.status}" />
+        <td th:text="${raceResult.points}" />
+
+    </tr>
+
+</table>
+
+
+</body>
+</html>

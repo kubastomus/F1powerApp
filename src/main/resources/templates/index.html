@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>F1 Seasons</title>
+</head>
+<body>
+
+<table>
+    <th>
+        <tr>Season Year</tr>
+        <tr>URL</tr>
+    </th>
+    <tr
+            th:each="season, iSeason: ${seasons}"
+            th:style="${iSeason.odd}? 'font-weight: bold;'"
+            th:alt-title="${iSeason.even}? 'even' : 'odd'">
+        <td th:text="${season.season}" />
+        <td><a th:href="${season.url}" th:text="${season.url}"></a><td/>
+
+    </tr>
+
+</table>
+
+</body>
+</html>
