@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Driver Standings</title>
+</head>
+<body>
+
+<table th:action="@{/__${idSeason}__/__${roundRace}__/driverStandings}">
+    <th>
+        <tr>Position</tr>
+        <tr>Driver Name</tr>
+        <tr>Driver Surname</tr>
+        <tr>Constructor</tr>
+        <tr>Points</tr>
+        <tr>Wins</tr>
+
+    </th>
+    <tr
+            th:each="driver, iStanding: ${driverStandings}"
+            th:style="${iStanding.odd}? 'font-weight: bold;'"
+            th:alt-title="${iStanding.even}? 'even' : 'odd'">
+        <td th:text="${driver.positionText}"/>
+        <td th:text="${driver.driver.givenName}"/>
+        <td th:text="${driver.driver.familyName}"/>
+        <td th:each="constructor, iStanding: ${driver.constructors}" >
+                <div th:text="${constructor.name}" />
+        <td/>
+        <td th:text="${driver.points}"/>
+        <td th:text="${driver.wins}"/>
+
+    </tr>
+
+</table>
+
+<a th:href="@{/__${idSeason}__}" >Return to season</a>
+
+</body>
+</html>

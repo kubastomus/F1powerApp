@@ -2,11 +2,11 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Drivers Standing</title>
+    <title>Race Results</title>
 </head>
 <body>
 
-<table>
+<table th:action="@{/__${idSeason}__/__${roundRace}__/results}">
     <th>
         <tr>Position</tr>
         <tr>Driver Name</tr>
@@ -35,6 +35,8 @@
 
 </table>
 
+<a th:href="@{/__${idSeason}__}" >Return to season</a>
+<a th:href="@{/}" >Return index</a>
 
 </body>
 </html>

@@ -2,32 +2,50 @@ package pl.kubastomus.f1powerapp;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import ru.olerom.formula.ergast.Ergast;
-import ru.olerom.formula.ergast.objects.DriverStandings;
 import ru.olerom.formula.ergast.objects.RaceResult;
 import ru.olerom.formula.ergast.objects.Schedule;
 import ru.olerom.formula.ergast.objects.Season;
+
+
 import java.io.IOException;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Controller
 public class SeasonController {
 
     private Ergast ergastContr = new Ergast();
 
-    @RequestMapping
-    public String getSeasons(Model model) throws IOException {
+//    @RequestMapping("/")
+//    public String getSeasons(Model model) throws IOException {
+//
+//        Ergast ergastSeasons = new Ergast();
+//        List<Season> seasons = ergastSeasons.getSeasons();
+//        model.addAttribute("seasons", seasons);
+//
+//        return "index";
+//    }
 
-        Ergast ergastSeasons = new Ergast();
-        List<Season> seasons = ergastSeasons.getSeasons();
-        model.addAttribute("seasons", seasons);
 
-        return "index";
+    @GetMapping("/")// zamieniona strona startowa na formularz wyboru sezonu
+    public String getHomePage(Model model) throws IOException {
+        model.addAttribute("emptySeason", new SeasonDTO());
+
+        return "index2";
     }
 
-    @RequestMapping("/{idSeason}")
+    @PostMapping("/{idSeason}")
+    public String postHomePage(@ModelAttribute("emptySeason") SeasonDTO seasonDTO, Model model) throws IOException {
+        ergastContr.setSeason(seasonDTO.getIdSeason());
+        List<Schedule> scheduleList = ergastContr.getSchedules();
+        model.addAttribute("season", scheduleList);
+
+        return "seasonSchedule";
+    }
+
+    @GetMapping("/{idSeason}")
     public String getSeason(@PathVariable Integer idSeason, Model model) throws IOException {
         ergastContr.setSeason(idSeason);
         List<Schedule> scheduleList = ergastContr.getSchedules();

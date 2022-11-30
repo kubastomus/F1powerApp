@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+</head>
+<body>
+
+<header class="bg-warning text-white">
+    <div class="container text-center">
+        <h1>Do you like F1 ?</h1>
+        <h3>Let's go to race!</h3>
+
+
+        <form method="post" th:action="@{/__${idSeason}__}" th:object="${emptySeason}">
+            <div>
+                <span>Enter season:</span>
+                <input type="text" th:field="*{idSeason}" placeholder="Enter season...">
+            </div>
+            <button type="submit" >Start race</button>
+        </form>
+
+
+    </div>
+</header>
+
+</body>
+</html>

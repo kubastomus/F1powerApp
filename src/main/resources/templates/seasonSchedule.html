@@ -15,6 +15,9 @@
         <tr>Grand Prix Time</tr>
         <tr>Name Circuit</tr>
         <tr>More Information</tr>
+        <tr>Race results</tr>
+        <tr>Driver standings</tr>
+        <tr>Constructor standings</tr>
     </th>
     <tr
             th:each="schedule, iSeason: ${season}"
@@ -26,10 +29,17 @@
         <td th:text="${schedule.date}" />
         <td th:text="${schedule.time}" />
         <td th:text="${schedule.circuit.circuitName}" />
-        <td><a th:href="${schedule.url}" th:text="More_info"></a><td/>
+        <td><a th:href="${schedule.url}" >More info</a><td/>
+        <td><a th:href="@{/__${schedule.season}__/__${schedule.round}__/results}" >Race results</a></td>
+        <td><a th:href="@{/__${schedule.season}__/__${schedule.round}__/driverStandings}" >Driver standings</a></td>
+        <td><a th:href="@{/__${schedule.season}__/__${schedule.round}__/constructorStandings}" >Constructor standings</a></td>
+
     </tr>
 
+
 </table>
+
+<a th:href="@{/}" >Return index</a>
 
 </body>
 </html>
