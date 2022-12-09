@@ -1,28 +1,110 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Home Page</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>F1 Season start</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/scrolling-nav.css" rel="stylesheet">
+
+
 </head>
-<body>
 
-<header class="bg-warning text-white">
+<body id="page-top">
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background-color: rgb(250,4,4)">
+    <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">F1powerApp</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#about">About F1powerApp</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#contact">Contact author</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header class="text-danger" style="background-image: url(../files/flag_racing1.jpg)">
     <div class="container text-center">
-        <h1>Do you like F1 ?</h1>
-        <h3>Let's go to race!</h3>
-
+        <h1>Do you like F1 power ?</h1>
+        <p class="lead font-weight-bold">Let's go to race !</p>
 
         <form method="post" th:action="@{/__${idSeason}__}" th:object="${emptySeason}">
             <div>
-                <span>Enter season:</span>
+                <span class="font-weight-bold">Enter season:</span>
                 <input type="text" th:field="*{idSeason}" placeholder="Enter season...">
             </div>
-            <button type="submit" >Start race</button>
+            <button class="btn-danger" type="submit" >Start race</button>
         </form>
-
 
     </div>
 </header>
 
+<section id="about" class=" bg-primary text-white" style="background-image: url(../files/2014-fia-formula-one.png)">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>About F1PowerApp</h2>
+                <p class="lead">This app shows hidden power in F1 </p>
+                <ul>
+                    <li>You can choose the season year</li>
+                    <li>See the results of a specific Grand Prix, driver standings, constructor standings, etc.</li>
+                    <li>Want even more, check the details of the selected Grand Prix, driver, constructor</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="contact" class="text-white" style="background-image: url(../files/bolid_2.jpg)">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Contact me</h2>
+                <p class="lead">If you'd like to contact page author, feel free to
+                    <a href="mailto:kubastomus@interia.pl">drop a line</a>!</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="py-5" style="background-color: rgba(157,155,161,0.27)">
+    <div class="container">
+        <p class="m-0 text-center text-dark">Copyright &copy; kubastomus <span th:text="${#dates.year(#dates.createNow())}"></span>.
+            Template by <a href="https://startbootstrap.com/templates/scrollingnav/">Start Bootstrap</a></p>
+    </div>
+    <!-- /.container -->
+</footer>
+
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- Custom JavaScript for this theme -->
+<script src="js/scrolling-nav.js"></script>
+
 </body>
+
 </html>

@@ -29,12 +29,14 @@ public class SeasonController {
 //    }
 
 
-    @GetMapping("/")// zamieniona strona startowa na formularz wyboru sezonu
+
+        @GetMapping("/")// zamieniona strona startowa na formularz wyboru sezonu
     public String getHomePage(Model model) throws IOException {
         model.addAttribute("emptySeason", new SeasonDTO());
 
         return "index2";
     }
+
 
     @PostMapping("/{idSeason}")
     public String postHomePage(@ModelAttribute("emptySeason") SeasonDTO seasonDTO, Model model) throws IOException {

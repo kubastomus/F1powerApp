@@ -7,15 +7,16 @@
 <body>
 
 <table th:action="@{/__${idSeason}__/__${roundRace}__/driverStandings}">
-    <th>
-        <tr>Position</tr>
-        <tr>Driver Name</tr>
-        <tr>Driver Surname</tr>
-        <tr>Constructor</tr>
-        <tr>Points</tr>
-        <tr>Wins</tr>
+    <tr>
+        <th>Position</th>
+        <th>Driver Name</th>
+        <th>Driver Surname</th>
+        <th>Constructor</th>
+        <th>Points</th>
+        <th>Wins</th>
+        <th> More Information</th>
 
-    </th>
+    </tr>
     <tr
             th:each="driver, iStanding: ${driverStandings}"
             th:style="${iStanding.odd}? 'font-weight: bold;'"
@@ -28,6 +29,7 @@
         <td/>
         <td th:text="${driver.points}"/>
         <td th:text="${driver.wins}"/>
+        <td><a th:href="${driver.driver.url}" >More info</a><td/>
 
     </tr>
 
