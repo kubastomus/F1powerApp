@@ -9,13 +9,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <title>Race Results</title>
 
-    <link rel="stylesheet" href="../css/style.css" />
 
 </head>
-<body class="container-sm" style="background-color: rgb(20,213,65)">
+<body class="container-sm" style="background-color: rgba(54,90,245,0.93)">
 <h2 class="text-center"> Race Results </h2>
-<table th:action="@{/__${idSeason}__/__${roundRace}__/results}" class="table table-striped text-sm-center" style="background-image: url(../files/race_f1.jpg)">
-    <thead class="table-striped" style="background-color: rgba(54,68,246,0.93)">
+<table th:action="@{/__${idSeason}__/__${roundRace}__/results}" class="table table-striped text-sm-center" th:style="'background-image: url(/files/race_f1.jpg)'">
+    <thead class="table-striped" style="background-color: rgb(250,4,4)">
     <tr>
         <th>Position</th>
         <th>Driver Name</th>
@@ -48,7 +47,7 @@
 
 </table>
 
-<a th:href="@{/__${idSeason}__}" style="background-color: rgba(250,97,32,0.93)" class="btn" >Return to season</a>
+<a th:href="@{/__${idSeason}__}" style="background-color: rgb(90,236,29)" class="btn" >Return to season</a>
 <a th:href="@{/}" style="background-color: rgba(50,231,248,0.93)" class="btn" >Return home page</a>
 
 </body>
