@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
 
@@ -49,11 +49,20 @@
         <form method="post" th:action="@{/__${idSeason}__}" th:object="${emptySeason}">
             <div>
                 <span class="font-weight-bold">Enter season:</span>
-                <input type="text" th:field="*{idSeason}" placeholder="Enter season...">
+<!--                <input type="text" th:field="*{idSeason}" placeholder="Enter season...">-->
+
+                    <select th:field="*{idSeason}" class="form-control-sm">
+<!--                        Manual ascending selection-->
+<!--                        <option value="1950">1950</option>-->
+<!--                        <option value="1951">1951</option>-->
+<!--                        <option value="1952">1952</option>-->
+                        <option th:each="number : ${#numbers.sequence(1950,#dates.year(#dates.createNow()))}" th:value="${number}" th:text="${number}"></option>
+                    </select>
 
             </div>
             <button class="btn-danger" type="submit" >Start race</button>
         </form>
+
 
     </div>
 </header>
