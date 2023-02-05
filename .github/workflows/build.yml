@@ -39,6 +39,15 @@ jobs:
       with:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
+        
+    - name: Build image and push to Docker Hub and GitHub Container Registry
+      uses: docker/build-push-action@v2
+      with:
+        context: .
+        tags:
+            kubastomus/f1powerapp:latest
+        # relative path to the place where source code with Dockerfile is located
+        push: ${{ github.ref == 'refs/heads/master' }}
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
     - name: Update dependency graph
