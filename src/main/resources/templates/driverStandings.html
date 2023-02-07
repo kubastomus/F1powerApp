@@ -19,7 +19,7 @@
         <th>Position</th>
         <th>Driver Name</th>
         <th>Driver Surname</th>
-        <th>Constructor</th>
+        <th colspan="2">Constructor</th>
         <th>Points</th>
         <th>Wins</th>
         <th> More Information</th>
@@ -35,8 +35,10 @@
         <td th:text="${driver.positionText}"/>
         <td th:text="${driver.driver.givenName}"/>
         <td th:text="${driver.driver.familyName}"/>
-        <td th:each="constructor, iStanding: ${driver.constructors}" >
-                <div th:text="${constructor.name}" />
+<!--        <td class="d-flex flex-column text-break" th:each="constructor, iStanding: ${driver.constructors}">-->
+        <td class="d-flex flex-column" th:each="constructor, iStanding: ${driver.constructors}">
+            <div th:text="${constructor.name}"/>
+        <td/>
         <td th:text="${driver.points}" />
         <td th:text="${driver.wins}"/>
         <td><a th:href="${driver.driver.url}"><i class=" btn btn-info bi bi-info-square"> More</i></a><td/>
