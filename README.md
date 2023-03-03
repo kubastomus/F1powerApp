@@ -7,6 +7,8 @@
 - See the results of a specific Grand Prix, driver standings, constructor standings, etc.,
 - Check the details of the selected Grand Prix, driver, constructor,
 
+## Demo
+- [MIKR.US Demo F1powerApp](https://f1power.toadres.pl/)
 
 ## Tech stack
 - [Spring boot](https://spring.io/projects/spring-boot)
@@ -24,7 +26,9 @@
 - ☑️Creation a season selection and home page
 - ☑️Creation the functionality of Grand Prix results, driver standings, constructor standings
 - ☑️Improved html views
+- ☑️Improved html views
+- ☑️Local implementation of the docker image and creating a repository on Docker Hub
+- ☑️Starting docker image on serwer MIKR.US
 - ⬜️Fixing an SDK bug, making a contribution to the author or another clone of the solution
 - ⬜️Implementation of new views, e.g. charts or others
-- ⬜️Implementation on Mikrus
 - ⬜️Expanding the admin options
