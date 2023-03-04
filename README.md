@@ -26,9 +26,9 @@
 - ☑️Creation a season selection and home page
 - ☑️Creation the functionality of Grand Prix results, driver standings, constructor standings
 - ☑️Improved html views
-- ☑️Improved html views
 - ☑️Local implementation of the docker image and creating a repository on Docker Hub
 - ☑️Starting docker image on serwer MIKR.US
+- ☑️Automating Github commits in Docker Hub
 - ⬜️Fixing an SDK bug, making a contribution to the author or another clone of the solution
 - ⬜️Implementation of new views, e.g. charts or others
 - ⬜️Expanding the admin options
