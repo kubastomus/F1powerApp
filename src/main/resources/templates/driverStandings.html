@@ -22,8 +22,9 @@
         <th colspan="2">Constructor</th>
         <th>Points</th>
         <th>Wins</th>
-        <th> More Information</th>
+        <th>More Information</th>
         <th> </th>
+        <th>Show Progres Chart</th>
 
     </tr>
     </thead>
@@ -42,6 +43,7 @@
         <td th:text="${driver.points}" />
         <td th:text="${driver.wins}"/>
         <td><a th:href="${driver.driver.url}"><i class=" btn btn-info bi bi-info-square"> More</i></a><td/>
+        <td><a th:href="@{/__${idSeason}__/drivers/__${driver.driver.driverId}__/results}"><i class=" btn btn-warning bi bi-bar-chart-line-fill"> Driver progres</i></a></td>
 
     </tr>
     </tbody>

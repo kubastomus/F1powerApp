@@ -15,6 +15,7 @@
 - [Thymeleaf](https://www.thymeleaf.org/)
 - [Bootstrap 5.2.0](https://getbootstrap.com/docs/5.2/getting-started/introduction/)
 - [Ergast Developer API](https://ergast.com/mrd/)
+- [Docker](https://docs.docker.com/)
 
 ## Authors
 - https://github.com/kubastomus
