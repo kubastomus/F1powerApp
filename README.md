@@ -5,7 +5,7 @@
 - Uses SDK Formula One Ergast from [olerom](https://github.com/olerom/formula-one-ergast) 
 - You can choose the season year,
 - See the results of a specific Grand Prix, driver standings, constructor standings, etc.,
-- Check the details of the selected Grand Prix, driver, constructor,
+- Check the details of the selected Grand Prix, driver, constructor, etc.,
 
 ## Demo
 - [MIKR.US Demo F1powerApp](https://f1power.toadres.pl/)
