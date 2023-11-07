@@ -2,7 +2,7 @@
 
 ## This app shows hidden power in F1 
 - Uses Ergast Developer API [Homepage Ergast](https://ergast.com/mrd/)
-- Uses SDK Formula One Ergast from [olerom](https://github.com/olerom/formula-one-ergast) 
+- Uses SDK Formula One Ergast from [towczare](https://github.com/towczare/formula-one-ergast-sdk) 
 - You can choose the season year,
 - See the results of a specific Grand Prix, driver standings, constructor standings, etc.,
 - Check the details of the selected Grand Prix, driver, constructor, etc.,
@@ -30,6 +30,6 @@
 - ☑️Local implementation of the docker image and creating a repository on Docker Hub
 - ☑️Starting docker image on serwer MIKR.US
 - ☑️Automating Github commits in Docker Hub
-- ⬜️Fixing an SDK bug, making a contribution to the author or another clone of the solution
+- ☑️Fixing an SDK bug, making a contribution to the author or another clone of the solution
 - ⬜️Implementation of new views, e.g. charts or others
 - ⬜️Expanding the admin options

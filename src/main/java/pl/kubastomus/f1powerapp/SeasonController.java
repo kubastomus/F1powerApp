@@ -3,15 +3,14 @@ package pl.kubastomus.f1powerapp;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import ru.olerom.formula.ergast.Ergast;
-import ru.olerom.formula.ergast.objects.RaceResult;
-import ru.olerom.formula.ergast.objects.Schedule;
-import ru.olerom.formula.ergast.objects.Season;
+import pl.kodujmy.formula.ergast.Ergast;
+import pl.kodujmy.formula.ergast.objects.RaceResult;
+import pl.kodujmy.formula.ergast.objects.Schedule;
 
 
 import java.io.IOException;
 import java.util.List;
-import java.util.stream.Collectors;
+
 
 @Controller
 public class SeasonController {

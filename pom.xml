@@ -34,9 +34,9 @@
 
 
         <dependency>
-            <groupId>com.github.olerom.formula-one-ergast</groupId>
-            <artifactId>ergast</artifactId>
-            <version>0.1.1</version>
+            <groupId>pl.kodujmy.formula.ergast</groupId>
+            <artifactId>formula-one-ergast-sdk</artifactId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
 
 

@@ -1,10 +1,9 @@
 package pl.kubastomus.f1powerapp;
 
 import org.junit.jupiter.api.Test;
-import ru.olerom.formula.ergast.Ergast;
+import pl.kodujmy.formula.ergast.Ergast;
 
 import java.io.IOException;
-
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertNotSame;
