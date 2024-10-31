@@ -1,7 +1,8 @@
 package pl.kubastomus.f1powerapp;
 
 import org.junit.jupiter.api.Test;
-import pl.kodujmy.formula.ergast.Ergast;
+import pl.kubastomus.formula.ergast.Ergast;
+
 
 import java.io.IOException;
 

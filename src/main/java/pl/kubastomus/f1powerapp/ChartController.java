@@ -4,10 +4,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import pl.kodujmy.formula.ergast.Ergast;
-import pl.kodujmy.formula.ergast.objects.RaceResult;
-import pl.kodujmy.formula.ergast.objects.Schedule;
 
+import pl.kubastomus.formula.ergast.Ergast;
+import pl.kubastomus.formula.ergast.objects.RaceResult;
+import pl.kubastomus.formula.ergast.objects.Schedule;
 
 import java.io.IOException;
 import java.util.ArrayList;
